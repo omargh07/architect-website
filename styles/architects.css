@@ -157,7 +157,9 @@ main > section {
 
 .fact-description{
   max-width: 540px;
+  margin-bottom: 100px;
 }
+
 /* Responsive Media Query */
 @media screen and (max-width: 576px) {
   .navbar, 
@@ -168,8 +170,13 @@ main > section {
   .our-features{
     margin-left: 20px;
   }
-  .team-img-container{
+  .team-img-container,
+  .facts-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .facts-container {
+    justify-items: center;
+    gap: 24px;
   }
 }
 /* Medium Size Device */
