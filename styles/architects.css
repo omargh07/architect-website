@@ -99,10 +99,6 @@ main > section {
 
 }
 
-.banner-description {
-  text-wrap: wrap;
-}
-
 .banner-image {
   width: 100%;
 }
@@ -159,32 +155,104 @@ main > section {
   max-width: 540px;
   margin-bottom: 100px;
 }
+/* Our Sponsors Related Styles */
+.our-sponsors {
+  text-align: center;
 
+}
+.sponsors-info {
+  margin: 0 auto;
+  max-width: 540px;
+  margin-bottom: 50px;
+}
+
+.sponsors-title {
+  margin: 0;
+  padding-bottom: 24px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #131313;
+}
+
+.sponsor-description {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #727272;
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+
+.sponsor-companies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-companies img {
+  filter: grayscale(100%);
+}
 /* Responsive Media Query */
 @media screen and (max-width: 576px) {
   .navbar, 
   .nav-links,
-  .teams {
+  .teams,
+  .our-sponsors {
     flex-direction: column;
   }
   .our-features{
     margin-left: 20px;
   }
   .team-img-container,
-  .facts-container {
+  .facts-container,
+  .sponsor-companies {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .fact-content {
+    text-align: center;
+    padding: 0 5px;
   }
   .facts-container {
     justify-items: center;
     gap: 24px;
   }
+  .sponsor-companies {
+    justify-items: center;
+    gap: 24px;
+  }
 }
 /* Medium Size Device */
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .navbar{
+    padding-left: 20px;
+  }
   .teams {
     flex-direction: column;
+  }
+  .banner-description {
+    padding: 10px 20px;
   }
   .our-features {
     margin: 50px auto;
   }
+  .some-facts {
+    margin-top: 60px;
+  }
+  .fact-content {
+    text-align: center;
+  }
+  .section-title {
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  .fact-description {
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+
+  .facts-container,
+  .sponsor-companies {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-items: center;
+  }
+  
 }
