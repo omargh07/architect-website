@@ -128,12 +128,13 @@ main > section {
   display: flex;
   gap: 140px;
 }
-
+.width {
+  max-width: 586px;
+}
 #features-section-title {
   border-left: 5px solid #FF900E;
   padding-left: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
+
 }
 
 /* feature card styles */
@@ -154,7 +155,7 @@ main > section {
   font-size: 1.5rem;
   font-weight: 500;
   margin-left: -92px;
-  margin-top: -110px;
+  margin-top: -135px;
 }
 
 #experience-year {
@@ -235,6 +236,27 @@ main > section {
 .sponsor-companies img {
   filter: grayscale(100%);
 }
+/* Footer styles */
+.footer-section {
+  margin: 100px 100px;
+}
+.footer {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  padding: 0 16px;  
+  box-sizing: border-box;
+  height: 100px;
+}
+.footer-text {
+  margin: auto;
+  font-size: 1.25rem;
+  font-weight: 400;
+  
+}
+
 /* Responsive Media Query */
 @media screen and (max-width: 576px) {
   .navbar, 
@@ -244,12 +266,24 @@ main > section {
   .features {
     flex-direction: column;
   }
+  .brand {
+    font-size: 2.8rem;
+  }
+  .banner-title {
+    font-size: 3rem;
+   font-weight: 700;
+  }
+  .banner-description {
+    text-align: center;
+    padding: 10px 20px;
+  }
   .our-features{
     margin-left: 20px;
   }
-   #experience-badge{
-    margin-top: 20px;
-    margin-left: 40px;
+
+  #experience-badge{
+    margin: 10px 50px;
+    justify-content: center;
   }
   .team-img-container,
   .facts-container,
@@ -268,13 +302,18 @@ main > section {
     justify-items: center;
     gap: 24px;
   }
+
+ .footer {
+    width: 100%;
+  }
 }
 /* Medium Size Device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .navbar{
     padding-left: 20px;
   }
-  .teams {
+  .teams, 
+  .features {
     flex-direction: column;
   }
   .banner-description {
@@ -305,5 +344,12 @@ main > section {
     gap: 50px;
     justify-items: center;
   }
-  
+  .features {
+    align-items: center;
+  }
+  #experience-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+ 
 }
